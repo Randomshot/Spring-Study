@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 아래 내용은 다음과 같다 : UserBean userBean = new UserBean(); -->
+    <bean id="userBean" class="org.example.UserBean"></bean>
+    <!-- 아래 내용은 다음과 같다 :
+         Engine e = new Engine();
+        Car c = new Car();
+        c.setEngine( e );
+        c.run();
+     -->
+    <bean id="e" class="org.example.Engine"></bean>
+    <bean id="car" class="org.example.Car">
+        <property name="engine" ref="e"></property>
+    </bean>
+</beans>
