@@ -11,10 +11,10 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class DBConfig {
     private String driverClassName = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://3.39.198.151:30006/serving";
+    private String url = "jdbc:mysql://ip:port/db";
 
-    private String username = "MrStacker";
-    private String password = "agilesoda";
+    private String username = "id";
+    private String password = "pw";
 
     @Bean
     public DataSource dataSource(){
